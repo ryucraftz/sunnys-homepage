@@ -21,9 +21,9 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Atharv,  the master of pixels and conqueror of realms. 
+      I&apos;m Atharv,  the master of pixels and conqueror of realms. 
       This is where epic tales and legendary victories reside.From slaying dragons to toppling empires, 
-      I've traversed countless virtual worlds, leaving a trail of triumph in my wake. Join My
+      I&apos;ve traversed countless virtual worlds, leaving a trail of triumph in my wake. Join My
 <Link href=""> Discord</Link> server and forge alliances with fellow warriors, strategize, and embark on daring quests together.
     </Text>
   </Fragment>
