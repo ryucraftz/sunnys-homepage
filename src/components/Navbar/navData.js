@@ -16,17 +16,17 @@ export const navLinks = [
 export const socialLinks = [
   {
     label: 'Twitter',
-    url: 'https://twitter.com/hamishMW',
+    url: '',
     icon: 'twitter',
   },
   {
     label: 'Discord',
-    url: 'https://www.figma.com/@Hamish',
+    url: '',
     icon: 'discord',
   },
   {
     label: 'Github',
-    url: 'https://github.com/HamishMW',
+    url: '',
     icon: 'github',
   },
 ];
