@@ -53,7 +53,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 secondary
                 className={styles.button}
                 data-visible={visible}
-                href="/contact"
+                href="mailto:atharvshankaringle@gmail.com"
                 icon="send"
               >
                 Send me a message
