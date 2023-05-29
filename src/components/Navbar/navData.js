@@ -20,9 +20,9 @@ export const socialLinks = [
     icon: 'twitter',
   },
   {
-    label: 'Figma',
+    label: 'Discord',
     url: 'https://www.figma.com/@Hamish',
-    icon: 'figma',
+    icon: 'discord',
   },
   {
     label: 'Github',
