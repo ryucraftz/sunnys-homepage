@@ -8,7 +8,7 @@ import Close from './svg/close.svg';
 import Copy from './svg/copy.svg';
 import Error from './svg/error.svg';
 import Discord from './svg/discord.svg';
-import Github from './svg/github.svg';
+import Youtube from './svg/youtube.svg';
 import Link from './svg/link.svg';
 import Menu from './svg/menu.svg';
 import Pause from './svg/pause.svg';
@@ -26,7 +26,7 @@ export const icons = {
   copy: Copy,
   error: Error,
   discord: Discord,
-  github: Github,
+  youtube: Youtube,
   link: Link,
   menu: Menu,
   pause: Pause,

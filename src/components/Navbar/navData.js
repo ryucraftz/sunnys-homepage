@@ -12,7 +12,7 @@ export const navLinks = [
 export const socialLinks = [
   {
     label: 'Twitter',
-    url: '',
+    url: 'https://twitter.com/atharv_ingle_',
     icon: 'twitter',
   },
   {
@@ -21,8 +21,8 @@ export const socialLinks = [
     icon: 'discord',
   },
   {
-    label: 'Github',
-    url: '',
-    icon: 'github',
+    label: 'Youtube',
+    url: 'https://youtube.com/@CriminalXGaming07',
+    icon: 'youtube',
   },
 ];
