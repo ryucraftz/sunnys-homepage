@@ -69,7 +69,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
               </h1>
               <Heading level={0} as="h2" className={styles.title}>
                 <VisuallyHidden className={styles.label}>
-                  {`Designer + ${introLabel}`}
+                  {`Gamer + ${introLabel}`}
                 </VisuallyHidden>
                 <span aria-hidden className={styles.row}>
                   <span
