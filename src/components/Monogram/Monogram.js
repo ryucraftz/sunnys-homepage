@@ -7,26 +7,30 @@ export const Monogram = forwardRef(({ highlight, className, ...props }, ref) => 
   const clipId = `${id}monogram-clip`;
 
   return (
-    <svg
-      aria-hidden
-      className={classes(styles.monogram, className)}
-      width="46"
-      height="29"
-      viewBox="0 0 46 29"
-      ref={ref}
-      {...props}
-    >
-      <defs>
-        <clipPath id={clipId}>
-          <path d="M16.525 28.462l7.18-18.35.003-.001 9.72 18.442a.838.838 0 001.524-.093l3.39-8.824a.846.846 0 00-.04-.686L30.307 3.605A6.698 6.698 0 0024.367 0h-4.6a.84.84 0 00-.74 1.23l3.63 6.887-3.655 9.15-7.12-13.662A6.698 6.698 0 005.942 0h-4.6a.842.842 0 00-.748 1.23L15 28.554a.839.839 0 001.524-.092zM42.392 8.806a.835.835 0 00.387-.446v.001l2.67-7.23a.838.838 0 00-.785-1.129h-6.578a.837.837 0 00-.736 1.238l3.907 7.226c.22.41.729.56 1.135.34z" />
-        </clipPath>
-      </defs>
-      <rect clipPath={`url(#${clipId})`} width="100%" height="100%" />
-      {highlight && (
-        <g clipPath={`url(#${clipId})`}>
-          <rect className={styles.highlight} width="100%" height="100%" />
-        </g>
-      )}
+    <svg width="2563" height="2571" viewBox="0 0 2563 2571" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1879.5 432V964.5L2397.5 1971V432L2149.5 891.5L1879.5 432Z" fill="white"/>
+    <path d="M16 2460L1274 2L2558 2460H2197L1274 742L391.5 2460H16Z" fill="white"/>
+    <path d="M1879.5 432V964.5L2397.5 1971V432L2149.5 891.5L1879.5 432Z" stroke="white"/>
+    <path d="M16 2460L1274 2L2558 2460H2197L1274 742L391.5 2460H16Z" stroke="white"/>
+    <g filter="url(#filter0_d_0_1)">
+    <path d="M391.5 2562.5L1270.5 844.5L2178.5 2562.5H2000L1270.5 1183.5L570 2562.5H391.5Z" fill="white"/>
+    <path d="M938.5 2175.5L1270.5 1534L1620.5 2175.5H938.5Z" fill="white"/>
+    <path d="M1803 97H2485L2138.5 750L1803 97Z" fill="white"/>
+    <path d="M2178.5 2562.5L1270.5 844.5L391.5 2562.5H570L1270.5 1183.5L2000 2562.5H2178.5ZM2178.5 2562.5H2558L1270.5 97L5 2562.5M938.5 2175.5L1270.5 1534L1620.5 2175.5H938.5ZM1803 97H2485L2138.5 750L1803 97ZM2415.5 2073.5V534.5L2138.5 1001.5L1886.5 534.5V1092.5L2393.5 2073.5H2415.5Z" stroke="black"/>
+    </g>
+    <defs>
+    <filter id="filter0_d_0_1" x="0.555175" y="95.9125" width="2562.27" height="2475.09" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feOffset dy="4"/>
+    <feGaussianBlur stdDeviation="2"/>
+    <feComposite in2="hardAlpha" operator="out"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_1"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_1" result="shape"/>
+    </filter>
+    </defs>
     </svg>
+    
   );
 });
