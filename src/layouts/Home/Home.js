@@ -79,8 +79,12 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        title="Unleashing Tactical Domination: A Valorant Virtuoso's Journey"
+        description="In the vibrant realm of Valorant, 
+        I weave my saga of skill and strategy. 
+        Join me in this pulse-pounding journey through tactical showdowns, clutch plays, and heart-pounding victories. 
+        As I ascend through ranks, my commitment to precision and cunning never wavers. 
+        Together, we'll unravel the art of Valorant and etch our names into its annals of glory."
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
         model={{
