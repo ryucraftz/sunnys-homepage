@@ -92,7 +92,6 @@ export const Home = () => {
           textures: [
             {
               srcSet: [sprTexture, sprTextureLarge],
-              placeholder: sprTexturePlaceholder,
             },
           ],
         }}
