@@ -7,7 +7,7 @@ export const Footer = ({ className }) => (
   <footer className={classes(styles.footer, className)}>
     <Text size="s" align="center">
       <span className={styles.date}>
-        {`© ${new Date().getFullYear()} Atharv Ingle.`}
+        {`© ${new Date().getFullYear()} Sunny XO.`}
       </span>
       <Link secondary className={styles.link} href="https://ryucraftz-homepage.vercel.app/" target="_self">
         Crafted by @ryucraftz

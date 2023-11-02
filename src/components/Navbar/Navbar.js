@@ -144,7 +144,7 @@ export const Navbar = () => {
         <a
           data-navbar-item
           className={styles.logo}
-          aria-label="Atharv Ingle, Gamer"
+          aria-label="Sunny XO, Gamer"
           onClick={handleMobileNavClick}
         >
           

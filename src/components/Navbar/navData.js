@@ -12,17 +12,17 @@ export const navLinks = [
 export const socialLinks = [
   {
     label: 'Twitter',
-    url: 'https://twitter.com/atharv_ingle_',
+    url: '',
     icon: 'twitter',
   },
   {
     label: 'Discord',
-    url: 'https://discord.gg/EnZb9Qftce',
+    url: '',
     icon: 'discord',
   },
   {
     label: 'Youtube',
-    url: 'https://youtube.com/@CriminalXGaming07',
+    url: '',
     icon: 'youtube',
   },
 ];
