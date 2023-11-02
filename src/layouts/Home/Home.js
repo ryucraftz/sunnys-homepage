@@ -64,7 +64,7 @@ export const Home = () => {
     <div className={styles.home}>
       <Meta
         title="Gamer + Streamer"
-        description="Design portfolio of Atharv Ingle — a product designer working on web & mobile
+        description="Design portfolio of Sunny XO — a product designer working on web & mobile
           apps with a focus on motion, experience design, and accessibility."
       />
       <Intro

@@ -1,4 +1,4 @@
-service: atharv-portfolio
+service: sunny-portfolio
 
 provider:
   name: aws

@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "homepage": "Atharv's Portfolio",
-  "description": "Portfolio site for Atharv Ingle",
+  "homepage": "Sunny's Portfolio",
+  "description": "Portfolio site for Sunny XO",
   "repository": "https://github.com/ryucraftz/atharvs-homepage.git",
   "author": "Vaibhavs Sathe <hello@vaibhavsryu.com>",
   "devDependencies": {
@@ -49,8 +49,8 @@
     "dev": "next dev",
     "build": "next build && next export -o build/",
     "build:storybook": "build-storybook -o build-storybook && node scripts/draco-storybook",
-    "deploy": "aws s3 sync --delete build/ s3://atharv-portfolio-site",
-    "deploy:storybook": "aws s3 sync --delete build-storybook s3://atharv-portfolio-storybook",
+    "deploy": "aws s3 sync --delete build/ s3://sunny-portfolio-site",
+    "deploy:storybook": "aws s3 sync --delete build-storybook s3://sunny-portfolio-storybook",
     "deploy:functions": "cd functions && npm run deploy",
     "start": "next start",
     "test": "echo 'write some tests'",
