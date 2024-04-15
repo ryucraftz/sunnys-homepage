@@ -131,7 +131,7 @@ export const Home = () => {
         title=""
         description=""
         buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonLink=""
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
