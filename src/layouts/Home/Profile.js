@@ -21,7 +21,7 @@ const ProfileText = ({ visible, titleId }) => (
     <DecoderText text="Hi there" start={visible} delay={500} />
   </Heading>
   <Text className={styles.description} data-visible={visible} size="l" as="p">
-  Hello, I'm Juanita Lama, 
+  Hello, Im Juanita Lama, 
   a passionate content creator dedicated to sharing the vibrant world of Korean culture through my videos. 
   On my platform, you'll find a diverse array of content ranging from in-depth 
   analyses of K-Pop hits and insightful reviews of the latest K-Dramas to engaging tutorials on 
