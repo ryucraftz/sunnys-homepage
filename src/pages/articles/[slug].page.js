@@ -5,19 +5,14 @@ import { bundleMDX } from 'mdx-bundler';
 import { getMDXComponent } from 'mdx-bundler/client';
 import { useMemo } from 'react';
 import readingTime from 'reading-time';
-import rehypeImgSize from 'rehype-img-size';
-import rehypeMinify from 'rehype-preset-minify';
-import rehypeSlug from 'rehype-slug';
 import { POSTS_PATH, postFilePaths } from 'utils/mdx';
 import { formatTimecode } from 'utils/timecode';
-import rehypePrism from '@mapbox/rehype-prism';
-import { generateOgImage } from './og-image';
 
-export default function PostPage({ frontmatter, code, timecode, ogImage }) {
+export default function PostPage({ frontmatter, code }) {
   const MDXComponent = useMemo(() => getMDXComponent(code), [code]);
 
   return (
-    <Post timecode={timecode} ogImage={ogImage} {...frontmatter}>
+    <Post timecode={frontmatter.timecode} ogImage={frontmatter.ogImage} {...frontmatter}>
       <MDXComponent components={postMarkdown} />
     </Post>
   );
@@ -31,14 +26,7 @@ export const getStaticProps = async ({ params }) => {
     source,
     mdxOptions(options) {
       options.remarkPlugins = [...(options.remarkPlugins ?? [])];
-      options.rehypePlugins = [
-        ...(options.rehypePlugins ?? []),
-        rehypePrism,
-        rehypeSlug,
-        rehypeMinify,
-        [rehypeImgSize, { dir: 'public' }],
-      ];
-
+      // Add any necessary remarkPlugins here
       return options;
     },
   });
@@ -46,15 +34,11 @@ export const getStaticProps = async ({ params }) => {
   const { time } = readingTime(matter.content);
   const timecode = formatTimecode(time);
 
-  const ogImage = await generateOgImage({
-    title: frontmatter.title,
-    date: frontmatter.date,
-    banner: frontmatter.banner,
-    timecode,
-  });
+  // You may need to replace this with the logic to generate ogImage without Puppeteer
+  const ogImage = frontmatter.ogImage;
 
   return {
-    props: { code, frontmatter, timecode, ogImage },
+    props: { code, frontmatter: { ...frontmatter, timecode, ogImage } },
     notFound: process.env.NODE_ENV === 'production' && frontmatter.draft,
   };
 };
