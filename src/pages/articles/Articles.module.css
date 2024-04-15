@@ -1,4 +1,4 @@
-@custom-media --singleColumnWidth (max-width: 1190px);
+/* @custom-media --singleColumnWidth (max-width: 1190px);
 
 .articles {
   display: grid;
@@ -368,4 +368,4 @@
     height: 2px;
     background-color: rgb(var(--rgbText) / 0.2);
   }
-}
+} */

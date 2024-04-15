@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: Gotham;
   font-weight: 400;
   src: url('../../assets/fonts/gotham-book.woff2') format('woff2');
@@ -134,4 +134,4 @@
   height: 4px;
   width: 100px;
   background-color: rgb(var(--rgbText) / 0.4);
-}
+} */
