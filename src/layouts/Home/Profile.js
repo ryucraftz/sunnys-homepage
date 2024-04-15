@@ -21,9 +21,9 @@ const ProfileText = ({ visible, titleId }) => (
     <DecoderText text="Hi there" start={visible} delay={500} />
   </Heading>
   <Text className={styles.description} data-visible={visible} size="l" as="p">
-  Hello, Im Juanita Lama, 
+  Hello, I&apos;m Juanita Lama, 
   a passionate content creator dedicated to sharing the vibrant world of Korean culture through my videos. 
-  On my platform, you'll find a diverse array of content ranging from in-depth 
+  On my platform, you&apos;ll find a diverse array of content ranging from in-depth 
   analyses of K-Pop hits and insightful reviews of the latest K-Dramas to engaging tutorials on 
   mastering the Korean language. Additionally, I love delving into the art of Korean tea and keeping my
    audience informed with the latest K-News updates. With a fervent love for all things K-Culture, I aim to both entertain and educate my viewers, fostering a deeper appreciation
