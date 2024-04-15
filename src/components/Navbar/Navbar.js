@@ -1,4 +1,5 @@
 import { Icon } from 'components/Icon';
+import { Monogram } from 'components/Monogram';
 import { useTheme } from 'components/ThemeProvider';
 import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
@@ -144,10 +145,10 @@ export const Navbar = () => {
         <a
           data-navbar-item
           className={styles.logo}
-          aria-label="Sunny XO, Gamer"
+          aria-label="Juanita Lama, Content Creator"
           onClick={handleMobileNavClick}
         >
-          
+          <Monogram highlight />
         </a>
       </RouterLink>
       <NavToggle onClick={() => dispatch({ type: 'toggleMenu' })} menuOpen={menuOpen} />

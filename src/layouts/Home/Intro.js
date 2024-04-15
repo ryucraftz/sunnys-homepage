@@ -65,11 +65,11 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
             <DisplacementSphere />
             <header className={styles.text}>
               <h1 className={styles.name} data-visible={visible} id={titleId}>
-                <DecoderText text="Sunny XO" delay={300} />
+                <DecoderText text="Juanita Lama" delay={300} />
               </h1>
               <Heading level={0} as="h2" className={styles.title}>
                 <VisuallyHidden className={styles.label}>
-                  {`Gamer + ${introLabel}`}
+                  {`Content Creator + ${introLabel}`}
                 </VisuallyHidden>
                 <span aria-hidden className={styles.row}>
                   <span
@@ -77,10 +77,11 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                     data-status={status}
                     style={cssProps({ delay: tokens.base.durationXS })}
                   >
-                    Gamer
+                    Content Creator
                   </span>
                   <span className={styles.line} data-status={status} />
                 </span>
+                {/** Ensure disciplines stay on a single line */}
                 <div className={styles.row} component="span">
                   <AnimatePresence>
                     {disciplines.map(item => (
@@ -134,3 +135,4 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
     </Section>
   );
 }
+  

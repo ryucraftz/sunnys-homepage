@@ -4,7 +4,11 @@ import gamestackTexture2 from 'assets/gamestack-list.jpg';
 import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
 import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
 import gamestackTexture from 'assets/gamestack-login.jpg';
+import sliceTextureLarge from 'assets/slice-app-large.jpg';
+import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
+import sliceTexture from 'assets/slice-app.jpg';
 import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
+import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
@@ -14,7 +18,7 @@ import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
-const disciplines = [ 'Streamer', 'Animator', 'Illustrator'];
+const disciplines = ['K-Pop Youtuber', 'Digital Marketer', 'Virtual Assistant'];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -22,10 +26,11 @@ export const Home = () => {
   const intro = useRef();
   const projectOne = useRef();
   const projectTwo = useRef();
+  const projectThree = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo,  details];
+    const sections = [intro, projectOne, projectTwo, projectThree, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -63,8 +68,8 @@ export const Home = () => {
   return (
     <div className={styles.home}>
       <Meta
-        title="Gamer + Streamer"
-        description="Design portfolio of Sunny XO — a product designer working on web & mobile
+        title="Content Creator + Developer"
+        description="Design portfolio of Juanita Lama — a product Content Creator working on web & mobile
           apps with a focus on motion, experience design, and accessibility."
       />
       <Intro
@@ -78,12 +83,8 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Unleashing Tactical Domination: A Valorant Virtuoso's Journey"
-        description="In the vibrant realm of Valorant, 
-        I weave my saga of skill and strategy. 
-        Join me in this pulse-pounding journey through tactical showdowns, clutch plays, and heart-pounding victories. 
-        As I ascend through ranks, my commitment to precision and cunning never wavers. 
-        Together, we'll unravel the art of Valorant and etch our names into its annals of glory."
+        title="Designing the future of education"
+        description="Designing a platform to help educators build better online courseware"
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
         model={{
@@ -92,6 +93,7 @@ export const Home = () => {
           textures: [
             {
               srcSet: [sprTexture, sprTextureLarge],
+              placeholder: sprTexturePlaceholder,
             },
           ],
         }}
@@ -102,10 +104,10 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Check out Author"
-        description="Design and development Website app built in React Native"
+        title=""
+        description=""
         buttonText="View website"
-        buttonLink="https://ryucraftz-homepage.vercel.app/"
+        buttonLink=""
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -117,6 +119,26 @@ export const Home = () => {
             {
               srcSet: [gamestackTexture2, gamestackTexture2Large],
               placeholder: gamestackTexture2Placeholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-3"
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
+        index={3}
+        title=""
+        description=""
+        buttonText="View project"
+        buttonLink="/projects/slice"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: [sliceTexture, sliceTextureLarge],
+              placeholder: sliceTexturePlaceholder,
             },
           ],
         }}

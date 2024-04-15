@@ -1,6 +1,6 @@
 .container {
   --inputFontSize: calc((16 / 16) * 1rem);
-  --inputFocusColor: #FF0000;
+  --inputFocusColor: rgb(var(--rgbPrimary));
   --inputUnderlineColor: rgb(var(--rgbText) / 0.2);
 
   position: relative;
@@ -41,7 +41,7 @@
   }
 
   &::-webkit-contacts-auto-fill-button:hover {
-    background-color: #FF0000;
+    background-color: rgb(var(--rgbPrimary));
   }
 
   @media (--mediaReduceMotion) {

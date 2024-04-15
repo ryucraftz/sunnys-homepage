@@ -80,7 +80,7 @@
     right: var(--spaceS);
     left: var(--spaceS);
     height: 4px;
-    background: #FF0000;
+    background: rgb(var(--rgbAccent));
     transform: scaleX(0);
     transform-origin: right;
   }
@@ -137,7 +137,7 @@
   &:hover,
   &:focus,
   &:active {
-    color: #FF0000;
+    color: rgb(var(--rgbAccent));
   }
 }
 
@@ -209,7 +209,7 @@
     right: var(--space3XL);
     left: var(--space3XL);
     height: 4px;
-    background: #FF0000;
+    background: rgb(var(--rgbAccent));
     transform: scaleX(0) translateY(-1px);
     transform-origin: right;
   }

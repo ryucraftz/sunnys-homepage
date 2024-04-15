@@ -1,6 +1,6 @@
 .link {
   --lineStrokeWidth: 2px;
-  --linkColor: #FF0000;
+  --linkColor: var(--rgbPrimary);
   --lineOpacity: 0.3;
   --filledLineGradient: linear-gradient(rgb(var(--linkColor)), rgb(var(--linkColor)));
   --unfilledLineGradient: linear-gradient(

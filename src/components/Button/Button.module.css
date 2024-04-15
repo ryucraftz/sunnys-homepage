@@ -28,7 +28,7 @@
     transition-property: opacity, color, background;
     transition-duration: var(--durationM);
     transition-timing-function: var(--bezierFastoutSlowin);
-    background: #FF0000;
+    background: rgb(var(--rgbPrimary));
     position: absolute;
     inset: 0;
     z-index: -1;
@@ -49,7 +49,7 @@
 
   &[data-secondary='true'] {
     --buttonSpace: 10px;
-    --buttonTextColor: #FF0000;
+    --buttonTextColor: rgb(var(--rgbPrimary));
 
     background: none;
     padding-left: var(--buttonSpace);
@@ -63,7 +63,7 @@
       height: calc((32 / 16) * 1rem);
       position: absolute;
       inset: 0;
-      background-color: #FF0000 / 0.2);
+      background-color: rgb(var(--rgbPrimary) / 0.2);
       transform: scale3d(0, 1, 1);
       transform-origin: right;
       clip-path: none;

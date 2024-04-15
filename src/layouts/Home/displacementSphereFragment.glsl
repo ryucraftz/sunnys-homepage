@@ -39,45 +39,38 @@ varying float noise;
 #include <clipping_planes_pars_fragment>
 
 void main() {
-    #include <clipping_planes_fragment>
+	#include <clipping_planes_fragment>
 
-    // Replace accent color with red matching color
-    vec3 accentColor = vec3(0.7, 0.15, 0.15);  // Adjust the RGB values to match your desired red color
+  vec3 color = vec3(vUv * (0.2 - 2.0 * noise), 1.0);
+  vec3 finalColors = vec3(color.b * 1.5, color.r, color.r);
+  vec4 diffuseColor = vec4(cos(finalColors * noise * 3.0), 1.0);
+  ReflectedLight reflectedLight = ReflectedLight(vec3(0.0), vec3(0.0), vec3(0.0), vec3(0.0));
+  vec3 totalEmissiveRadiance = emissive;
 
-    vec3 color = vec3(vUv * (0.2 - 2.0 * noise), 1.0);
-    vec3 finalColors = vec3(color.b * 1.5, color.r, color.r);
-    vec4 diffuseColor = vec4(cos(finalColors * noise * 3.0), 1.0);
-    ReflectedLight reflectedLight = ReflectedLight(vec3(0.0), vec3(0.0), vec3(0.0), vec3(0.0));
-    vec3 totalEmissiveRadiance = emissive;
+	#include <logdepthbuf_fragment>
+	#include <map_fragment>
+	#include <color_fragment>
+	#include <alphamap_fragment>
+	#include <alphatest_fragment>
+	#include <specularmap_fragment>
+	#include <normal_fragment_begin>
+	#include <normal_fragment_maps>
+	#include <emissivemap_fragment>
+	#include <lights_phong_fragment>
+	#include <lights_fragment_begin>
+	#include <lights_fragment_maps>
+	#include <lights_fragment_end>
+	#include <aomap_fragment>
 
-    #include <logdepthbuf_fragment>
-    #include <map_fragment>
-    #include <color_fragment>
-    #include <alphamap_fragment>
-    #include <alphatest_fragment>
-    #include <specularmap_fragment>
-    #include <normal_fragment_begin>
-    #include <normal_fragment_maps>
-    #include <emissivemap_fragment>
-    #include <lights_phong_fragment>
-    #include <lights_fragment_begin>
-    #include <lights_fragment_maps>
-    #include <lights_fragment_end>
-    #include <aomap_fragment>
+	vec3 outgoingLight = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse + reflectedLight.directSpecular + reflectedLight.indirectSpecular + totalEmissiveRadiance;
+  
+	#include <envmap_fragment>
+	#include <output_fragment>
+	#include <tonemapping_fragment>
+	#include <encodings_fragment>
+	#include <fog_fragment>
+	#include <premultiplied_alpha_fragment>
+	#include <dithering_fragment>
 
-    // Use red matching color as the new accent color
-    vec3 outgoingLight = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse + reflectedLight.directSpecular + reflectedLight.indirectSpecular + totalEmissiveRadiance;
-    outgoingLight = mix(outgoingLight, accentColor, 0.5);  // Adjust the mix factor to control the intensity of the accent color
-
-    #include <envmap_fragment>
-    #include <output_fragment>
-    #include <tonemapping_fragment>
-    #include <encodings_fragment>
-    #include <fog_fragment>
-    #include <premultiplied_alpha_fragment>
-    #include <dithering_fragment>
-
-    gl_FragColor = vec4(outgoingLight, diffuseColor.a);
+  gl_FragColor = vec4(outgoingLight, diffuseColor.a);
 }
-
-

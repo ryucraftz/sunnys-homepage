@@ -73,7 +73,7 @@
 
 .title {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-size: calc((140 / 16) * 1rem);
   letter-spacing: -0.005em;
 
@@ -142,7 +142,7 @@
 
   &::after {
     content: '';
-    background: #FF0000;
+    background: rgb(var(--rgbAccent));
     animation-duration: 1.5s;
     animation-delay: var(--delay);
     animation-fill-mode: forwards;

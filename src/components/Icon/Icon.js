@@ -7,15 +7,14 @@ import ChevronRight from './svg/chevron-right.svg';
 import Close from './svg/close.svg';
 import Copy from './svg/copy.svg';
 import Error from './svg/error.svg';
-import Discord from './svg/discord.svg';
-import Youtube from './svg/youtube.svg';
+import Figma from './svg/figma.svg';
+import Github from './svg/github.svg';
 import Link from './svg/link.svg';
 import Menu from './svg/menu.svg';
 import Pause from './svg/pause.svg';
 import Play from './svg/play.svg';
 import Send from './svg/send.svg';
 import Twitter from './svg/twitter.svg';
-
 
 export const icons = {
   arrowLeft: ArrowLeft,
@@ -25,8 +24,8 @@ export const icons = {
   close: Close,
   copy: Copy,
   error: Error,
-  discord: Discord,
-  youtube: Youtube,
+  figma: Figma,
+  github: Github,
   link: Link,
   menu: Menu,
   pause: Pause,
