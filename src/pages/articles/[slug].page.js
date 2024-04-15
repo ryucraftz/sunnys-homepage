@@ -1,10 +1,27 @@
 import fs from 'fs';
 import path from 'path';
+import { Post, postMarkdown } from 'layouts/Post';
 import { bundleMDX } from 'mdx-bundler';
+import { getMDXComponent } from 'mdx-bundler/client';
+import { useMemo } from 'react';
 import readingTime from 'reading-time';
-import { formatTimecode } from '../../utils/formatTimecode'; // Adjust path as per your project structure
+import rehypeImgSize from 'rehype-img-size';
+import rehypeMinify from 'rehype-preset-minify';
+import rehypeSlug from 'rehype-slug';
+import { POSTS_PATH, postFilePaths } from 'utils/mdx';
+import { formatTimecode } from 'utils/timecode';
+import rehypePrism from '@mapbox/rehype-prism';
+import { generateOgImage } from './og-image';
 
-const POSTS_PATH = path.join(process.cwd(), 'posts');
+export default function PostPage({ frontmatter, code, timecode, ogImage }) {
+  const MDXComponent = useMemo(() => getMDXComponent(code), [code]);
+
+  return (
+    <Post timecode={timecode} ogImage={ogImage} {...frontmatter}>
+      <MDXComponent components={postMarkdown} />
+    </Post>
+  );
+}
 
 export const getStaticProps = async ({ params }) => {
   const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`);
@@ -14,7 +31,14 @@ export const getStaticProps = async ({ params }) => {
     source,
     mdxOptions(options) {
       options.remarkPlugins = [...(options.remarkPlugins ?? [])];
-      // Add any necessary remarkPlugins here
+      options.rehypePlugins = [
+        ...(options.rehypePlugins ?? []),
+        rehypePrism,
+        rehypeSlug,
+        rehypeMinify,
+        [rehypeImgSize, { dir: 'public' }],
+      ];
+
       return options;
     },
   });
@@ -22,11 +46,26 @@ export const getStaticProps = async ({ params }) => {
   const { time } = readingTime(matter.content);
   const timecode = formatTimecode(time);
 
-  // Ensure that ogImage is defined and properly extracted from frontmatter
-  const ogImage = frontmatter.ogImage || '/default-og-image.png';
+  const ogImage = await generateOgImage({
+    title: frontmatter.title,
+    date: frontmatter.date,
+    banner: frontmatter.banner,
+    timecode,
+  });
 
   return {
-    props: { code, frontmatter: { ...frontmatter, timecode, ogImage } },
+    props: { code, frontmatter, timecode, ogImage },
     notFound: process.env.NODE_ENV === 'production' && frontmatter.draft,
+  };
+};
+
+export const getStaticPaths = async () => {
+  const paths = postFilePaths
+    .map(filePath => filePath.replace(/\.mdx?$/, ''))
+    .map(slug => ({ params: { slug } }));
+
+  return {
+    paths,
+    fallback: false,
   };
 };
