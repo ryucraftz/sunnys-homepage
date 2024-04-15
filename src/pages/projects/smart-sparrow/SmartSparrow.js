@@ -1,5 +1,9 @@
 import backgroundSprLarge from 'assets/spr-background-large.jpg';
 import backgroundSprPlaceholder from 'assets/spr-background-placeholder.jpg';
+import ytthumb1 from 'assets/maxresdefault.jpg';
+import ytthumb2 from 'assets/maxresdefault (1).jpg';
+import ytthumb3 from 'assets/maxresdefault (2).jpg';
+import ytthumb4 from 'assets/maxresdefault (3).jpg';
 import imageSprBackgroundVolcanismLarge from 'assets/spr-background-volcanism-large.jpg';
 import imageSprBackgroundVolcanismPlaceholder from 'assets/spr-background-volcanism-placeholder.jpg';
 import imageSprBackgroundVolcanism from 'assets/spr-background-volcanism.jpg';
@@ -70,14 +74,14 @@ import styles from './SmartSparrow.module.css';
 const Earth = dynamic(() => import('./Earth').then(mod => mod.Earth));
 const EarthSection = dynamic(() => import('./Earth').then(mod => mod.EarthSection));
 
-const title = 'Designing the future of education';
+const title = 'Learn about k_pop Culture';
 const description =
-  'I worked as the design lead on a major iteration of Smart Sparrow’s product. We took the platform in a bold new direction, focusing on becoming the best tool for learning Content Creators.';
+'Its all about the K-Culture, all the updates you need to know regarding K-pop and K-drama and also K-News! So if you are interested in the K-Tea you can subscribe to the channel!.';
 const roles = [
-  'Art Direction',
-  'UX and UI Design',
-  'Front End Development',
-  'Motion Design',
+  'K-Pop',
+  'K-Drama',
+  'K-News',
+  'K-Tea',
 ];
 
 export const SmartSparrow = () => {
@@ -104,7 +108,7 @@ export const SmartSparrow = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://www.smartsparrow.com/"
+          url=""
           roles={roles}
         />
         <ProjectSection padding="top">
@@ -128,19 +132,62 @@ export const SmartSparrow = () => {
           </ProjectSectionContent>
         </ProjectSection>
         <ProjectSection>
-          <ProjectTextRow>
-            <ProjectSectionHeading>The problem</ProjectSectionHeading>
-            <ProjectSectionText>
-              In 2017, Smart Sparrow began a project to build an entirely new platform to
-              from the ground up to serve as the most powerful tool for educators to
-              create online learning experiences. The old platform was built in Flash, and
-              there were a number of user experience problems to solve in the process of
-              moving the platform to Javascript. The primary goals for the project were
-              reducing barriers to collaboration, and making the platform both easier for
-              new users, but with plenty of room to scale for advanced users.
-            </ProjectSectionText>
-          </ProjectTextRow>
-        </ProjectSection>
+  <ProjectSectionHeading>YouTube Videos</ProjectSectionHeading>
+  <ProjectSectionContent className={styles.youtubeThumbnails}
+  ></ProjectSectionContent>
+  <div className={styles.thumbnailContainer} style={{ marginBottom: '20px' }}> {/* Added inline style with margin-bottom */}
+    <Link href="https://www.youtube.com/watch?v=G0FyZ3t-1DM">
+      <ProjectImage
+        src={ytthumb1}
+        placeholder={ytthumb1} // Changed source to ytthumb1
+        alt="YouTube Thumbnail 1"
+        width={160}
+        height={90}
+        className={styles.thumbnail}
+      />
+    </Link>
+    <ProjectSectionText>K-Pop Ongoing Global Online Auditions for April 2024</ProjectSectionText>
+  </div>
+  <div className={styles.thumbnailContainer} style={{ marginBottom: '20px' }}> {/* Added inline style with margin-bottom */}
+    <Link href="https://www.youtube.com/watch?v=dezMtk04L6M">
+      <ProjectImage
+        src={ytthumb2}
+        placeholder={ytthumb2} // Changed source to ytthumb1
+        alt="YouTube Thumbnail 2"
+        width={160}
+        height={90}
+        className={styles.thumbnail}
+      />
+    </Link>
+    <ProjectSectionText>Short Stories Topics For VISIT KOREA 2024</ProjectSectionText>
+  </div>
+  <div className={styles.thumbnailContainer} style={{ marginBottom: '20px' }}> {/* Added inline style with margin-bottom */}
+    <Link href="https://www.youtube.com/watch?v=G0FyZ3t-1DM">
+      <ProjectImage
+        src={ytthumb3}
+        placeholder={ytthumb3} // Changed source to ytthumb1
+        alt="YouTube Thumbnail 1"
+        width={160}
+        height={90}
+        className={styles.thumbnail}
+      />
+    </Link>
+    <ProjectSectionText>Short Stories Topics For VISIT KOREA 2024</ProjectSectionText>
+  </div>
+  <div className={styles.thumbnailContainer} style={{ marginBottom: '20px' }}> {/* Added inline style with margin-bottom */}
+    <Link href="https://www.youtube.com/watch?v=G0FyZ3t-1DM">
+      <ProjectImage
+        src={ytthumb4}
+        placeholder={ytthumb4} // Changed source to ytthumb1
+        alt="YouTube Thumbnail 1"
+        width={160}
+        height={90}
+        className={styles.thumbnail}
+      />
+    </Link>
+    <ProjectSectionText>2024 Cheonnan Kpop World Audition Guidelines</ProjectSectionText>
+  </div>
+</ProjectSection>
             </ProjectContainer>
       <Footer />
     </Fragment>
