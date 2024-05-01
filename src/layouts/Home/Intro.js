@@ -65,11 +65,11 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
             <DisplacementSphere />
             <header className={styles.text}>
               <h1 className={styles.name} data-visible={visible} id={titleId}>
-                <DecoderText text="Juanita Lama" delay={300} />
+                <DecoderText text="NihonCareerHub" delay={300} />
               </h1>
               <Heading level={0} as="h2" className={styles.title}>
                 <VisuallyHidden className={styles.label}>
-                  {`Content Creator + ${introLabel}`}
+                  {`Helps You Find ${introLabel}`}
                 </VisuallyHidden>
                 <span aria-hidden className={styles.row}>
                   <span
@@ -77,7 +77,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                     data-status={status}
                     style={cssProps({ delay: tokens.base.durationXS })}
                   >
-                    Content Creator
+                    Helps You Find
                   </span>
                   <span className={styles.line} data-status={status} />
                 </span>

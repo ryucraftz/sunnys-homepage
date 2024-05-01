@@ -7,9 +7,9 @@ import gamestackTexture from 'assets/gamestack-login.jpg';
 import sliceTextureLarge from 'assets/slice-app-large.jpg';
 import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
 import sliceTexture from 'assets/slice-app.jpg';
-import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
-import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
+import sprTextureLarge from 'assets/spr-lesson-builder-light.png';
+import sprTexturePlaceholder from 'assets/spr-lesson-builder-light.png';
+import sprTexture from 'assets/spr-lesson-builder-light.png';
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
 import { Intro } from 'layouts/Home/Intro';
@@ -18,7 +18,7 @@ import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
-const disciplines = ['K-Pop Youtuber', 'Digital Marketer', 'Virtual Assistant'];
+const disciplines = ['Your Desired Jobs', 'About Japanese Culture'];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -69,7 +69,7 @@ export const Home = () => {
     <div className={styles.home}>
       <Meta
         title="Content Creator + Developer"
-        description="Design portfolio of Juanita Lama — a product Content Creator working on web & mobile
+        description="Design portfolio of NihonCareerHub — a product Content Creator working on web & mobile
           apps with a focus on motion, experience design, and accessibility."
       />
       <Intro
@@ -83,8 +83,8 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Learn about k_pop Culture"
-        description="Here are my youtube posts to learn about k_pop Culture"
+        title="Learn about Japanese culture"
+        description="Look into Japanese Culture"
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
         model={{
