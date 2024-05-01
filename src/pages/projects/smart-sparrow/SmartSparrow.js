@@ -37,19 +37,24 @@ export const SmartSparrow = () => {
                       <ProjectImage src={ytthumb1} placeholder={ytthumb1} alt="YouTube Thumbnail 1" width={160} height={90} className={styles.thumbnail} />
                     </Link>
                     <span>
-Ramen is not just a dish in Japan; it's a cultural icon, a beloved comfort food that has captivated taste buds around the world. Originating from China, ramen was introduced to Japan in the late 19th century and has since evolved into a culinary phenomenon uniquely Japanese.</span>
+                      Ramen is not just a dish in Japan; it&apos;s a cultural icon, a beloved comfort food that has captivated taste buds around the world. Originating from China, ramen was introduced to Japan in the late 19th century and has since evolved into a culinary phenomenon uniquely Japanese.
+                    </span>
                   </div>
                   <div className={styles.thumbnailContainer}>
                     <Link href="">
                       <ProjectImage src={ytthumb2} placeholder={ytthumb2} alt="YouTube Thumbnail 2" width={160} height={90} className={styles.thumbnail} />
                     </Link>
-                    <span>Japanese cuisine is celebrated worldwide for its exquisite flavors, meticulous preparation, and artistic presentation. From sushi and sashimi to ramen and tempura, Japan offers a culinary journey like no other. Each dish reflects a harmonious blend of fresh ingredients, seasonal flavors, and culinary craftsmanship. Traditional Japanese dining emphasizes the importance of balance, simplicity, and appreciation for the natural beauty of food.</span>
+                    <span>
+                      Japanese cuisine is celebrated worldwide for its exquisite flavors, meticulous preparation, and artistic presentation. From sushi and sashimi to ramen and tempura, Japan offers a culinary journey like no other. Each dish reflects a harmonious blend of fresh ingredients, seasonal flavors, and culinary craftsmanship. Traditional Japanese dining emphasizes the importance of balance, simplicity, and appreciation for the natural beauty of food.
+                    </span>
                   </div>
                   <div className={styles.thumbnailContainer}>
                     <Link href="">
                       <ProjectImage src={ytthumb3} placeholder={ytthumb3} alt="YouTube Thumbnail 3" width={160} height={90} className={styles.thumbnail} />
                     </Link>
-                    <span>The samurai, legendary warriors of Japan, epitomize the country's spirit of honor, loyalty, and martial prowess. Emerging during the feudal era, samurai served as protectors of their lords and masters, adhering to a strict code of conduct known as Bushido. Renowned for their swordsmanship, discipline, and unwavering dedication, samurai have left an indelible mark on Japanese history and culture, inspiring countless tales of valor and heroism.</span>
+                    <span>
+                      The samurai, legendary warriors of Japan, epitomize the country&apos;s spirit of honor, loyalty, and martial prowess. Emerging during the feudal era, samurai served as protectors of their lords and masters, adhering to a strict code of conduct known as Bushido. Renowned for their swordsmanship, discipline, and unwavering dedication, samurai have left an indelible mark on Japanese history and culture, inspiring countless tales of valor and heroism.
+                    </span>
                   </div>
                 </div>
               </div>
